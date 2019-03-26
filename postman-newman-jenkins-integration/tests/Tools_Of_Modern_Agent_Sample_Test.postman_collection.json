@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "3842b816-3406-4d14-9e65-9e461d3cf4aa",
+		"name": "Tools_Of_Modern_Agent_Sample_Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://dev-mobile.remax-integra.net/api/v1/internalLinks?linksRequest.LinkCount=50&linksRequest.ListingType=2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d655d658-fc63-410d-8101-d51125a71108",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://dev-mobile.remax-integra.net/api/v1/internalLinks?linksRequest.LinkCount=50&linksRequest.ListingType=2",
+					"protocol": "https",
+					"host": [
+						"dev-mobile",
+						"remax-integra",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"internalLinks"
+					],
+					"query": [
+						{
+							"key": "linksRequest.LinkCount",
+							"value": "50"
+						},
+						{
+							"key": "linksRequest.ListingType",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
